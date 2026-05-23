@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Divya | Android Developer & Engineer</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet"/>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════ CANVAS (PARTICLES) ═══ -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- ═══════════════════════════════════════ CURSOR ═══════════════ -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ═══════════════════════════════════════ NAVBAR ═══════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">
+      <span class="logo-bracket">&lt;</span>Divya<span class="logo-bracket">/&gt;</span>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#hero"     class="nav-link active">Home</a></li>
+      <li><a href="#about"    class="nav-link">About</a></li>
+      <li><a href="#skills"   class="nav-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#profiles" class="nav-link">Profiles</a></li>
+      <li><a href="#contact"  class="nav-link">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ═══════════════════════════════════════ HERO ════════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-grid"></div>
+
+    <div class="hero-content">
+      <!-- Greeting pill -->
+      <div class="hero-greeting reveal">
+        <span class="greeting-dot"></span>
+        Available for Internships &amp; Projects
+      </div>
+
+      <!-- Main heading -->
+      <h1 class="hero-title reveal">
+        Hi, I'm <span class="gradient-text">Divya</span>
+      </h1>
+
+      <!-- Typing subtitle -->
+      <div class="hero-subtitle reveal">
+        <span class="static-text">I'm a&nbsp;</span>
+        <span class="typed-text" id="typedText"></span>
+        <span class="cursor-blink">|</span>
+      </div>
+
+      <!-- Short tagline -->
+      <p class="hero-tagline reveal">
+        3rd Year Engineering Student · Building cool things with code ·
+        Turning caffeine into Android apps &amp; algorithms.
+      </p>
+
+      <!-- CTA Buttons -->
+      <div class="hero-buttons reveal">
+        <a href="#projects" class="btn btn-primary">
+          <i class="fas fa-rocket"></i> View Projects
+        </a>
+        <a href="#contact" class="btn btn-outline">
+          <i class="fas fa-paper-plane"></i> Contact Me
+        </a>
+      </div>
+
+      <!-- Scroll hint -->
+      <div class="scroll-hint reveal">
+        <div class="scroll-mouse">
+          <div class="scroll-wheel"></div>
+        </div>
+        <span>Scroll Down</span>
+      </div>
+    </div>
+
+    <!-- Floating decorative blobs -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+
+    <!-- Tech badge strip -->
+    <div class="tech-strip reveal">
+      <span>Android</span><span>·</span>
+      <span>Java</span><span>·</span>
+      <span>C++</span><span>·</span>
+      <span>Firebase</span><span>·</span>
+      <span>DSA</span><span>·</span>
+      <span>AI/ML Enthusiast</span>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ ABOUT ════════════════ -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// about_me</span>
+        <h2 class="section-title">Who Am I?</h2>
+      </div>
+
+      <div class="about-grid">
+        <!-- Image card -->
+        <div class="about-image-wrap reveal">
+          <div class="about-image-card">
+            <div class="about-avatar">
+              <div class="avatar-ring"></div>
+              <div class="avatar-icon">
+                <i class="fas fa-user-astronaut"></i>
+              </div>
+            </div>
+            <!-- Floating stat cards -->
+            <div class="stat-card stat-top-right">
+              <i class="fas fa-code"></i>
+              <div>
+                <span class="stat-num">4+</span>
+                <span class="stat-label">Projects</span>
+              </div>
+            </div>
+            <div class="stat-card stat-bottom-left">
+              <i class="fas fa-layer-group"></i>
+              <div>
+                <span class="stat-num">9+</span>
+                <span class="stat-label">Skills</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Text content -->
+        <div class="about-text reveal">
+          <p class="about-lead">
+            I'm <strong>Divya</strong>, a passionate 3rd-year engineering student who loves
+            turning ideas into functional, user-centric applications.
+          </p>
+          <p>
+            My core focus is <span class="highlight">Android Development</span> — I build
+            real-world apps using Java and Android Studio, integrating Firebase for
+            real-time databases and authentication. I believe in creating apps that are not
+            just functional, but delightful to use.
+          </p>
+          <p>
+            Alongside app development, I'm actively leveling up my
+            <span class="highlight">Data Structures &amp; Algorithms</span> skills through
+            consistent LeetCode and Codeforces practice — because clean logic is the
+            backbone of great software.
+          </p>
+          <p>
+            I'm deeply curious about <span class="highlight">Artificial Intelligence</span>
+            and modern technologies, always exploring how AI can augment the apps we build.
+            My goal: become a full-stack software engineer who ships products that matter.
+          </p>
+
+          <!-- About tags -->
+          <div class="about-tags">
+            <span><i class="fas fa-mobile-alt"></i> Android Dev</span>
+            <span><i class="fas fa-brain"></i> DSA Learner</span>
+            <span><i class="fas fa-robot"></i> AI Enthusiast</span>
+            <span><i class="fas fa-graduation-cap"></i> Engineering Student</span>
+          </div>
+
+          <a href="#contact" class="btn btn-primary mt-20">
+            <i class="fas fa-handshake"></i> Let's Connect
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ SKILLS ═══════════════ -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// tech_stack</span>
+        <h2 class="section-title">Skills &amp; Technologies</h2>
+      </div>
+
+      <div class="skills-grid">
+
+        <!-- Skill Card -->
+        <div class="skill-card reveal" data-delay="0">
+          <div class="skill-icon" style="--clr:#00b4d8">
+            <i class="fas fa-c"></i>
+          </div>
+          <h3>C++</h3>
+          <p>Competitive programming, OOP, STL</p>
+          <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+        </div>
+
+        <div class="skill-card reveal" data-delay="60">
+          <div class="skill-icon" style="--clr:#e76f51">
+            <i class="fab fa-java"></i>
+          </div>
+          <h3>Java</h3>
+          <p>Android development, OOP fundamentals</p>
+          <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+        </div>
+
+        <div class="skill-card reveal" data-delay="120">
+          <div class="skill-icon" style="--clr:#3ddc84">
+            <i class="fab fa-android"></i>
+          </div>
+          <h3>Android Studio</h3>
+          <p>App design, UI/UX, debugging</p>
+          <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+        </div>
+
+        <div class="skill-card reveal" data-delay="180">
+          <div class="skill-icon" style="--clr:#ffba08">
+            <i class="fas fa-fire"></i>
+          </div>
+          <h3>Firebase</h3>
+          <p>Realtime DB, Auth, Firestore</p>
+          <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+        </div>
+
+        <div class="skill-card reveal" data-delay="240">
+          <div class="skill-icon" style="--clr:#c77dff">
+            <i class="fas fa-diagram-project"></i>
+          </div>
+          <h3>DSA</h3>
+          <p>Arrays, Trees, Graphs, DP</p>
+          <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+        </div>
+
+        <div class="skill-card reveal" data-delay="300">
+          <div class="skill-icon" style="--clr:#e44d26">
+            <i class="fab fa-html5"></i>
+          </div>
+          <h3>HTML</h3>
+          <p>Semantic markup, accessibility</p>
+          <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
+        </div>
+
+        <div class="skill-card reveal" data-delay="360">
+          <div class="skill-icon" style="--clr:#264de4">
+            <i class="fab fa-css3-alt"></i>
+          </div>
+          <h3>CSS</h3>
+          <p>Flexbox, Grid, animations</p>
+          <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+        </div>
+
+        <div class="skill-card reveal" data-delay="420">
+          <div class="skill-icon" style="--clr:#f7df1e">
+            <i class="fab fa-js"></i>
+          </div>
+          <h3>JavaScript</h3>
+          <p>DOM manipulation, ES6+</p>
+          <div class="skill-bar"><div class="skill-fill" data-width="72"></div></div>
+        </div>
+
+        <div class="skill-card reveal" data-delay="480">
+          <div class="skill-icon" style="--clr:#f0f6fc">
+            <i class="fab fa-github"></i>
+          </div>
+          <h3>GitHub</h3>
+          <p>Version control, collaboration</p>
+          <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ PROJECTS ════════════ -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// my_work</span>
+        <h2 class="section-title">Featured Projects</h2>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- ── Project 1: Attendify ── -->
+        <div class="project-card reveal" data-delay="0">
+          <div class="project-image" style="--accent:#3ddc84">
+            <div class="project-icon-wrap">
+              <i class="fas fa-calendar-check"></i>
+            </div>
+            <div class="project-shine"></div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Attendify App</h3>
+            <p class="project-desc">
+              A smart Android attendance tracker for students. Mark attendance, view subject-wise
+              stats, and get alerts when attendance drops below threshold — all synced via Firebase.
+            </p>
+            <div class="project-tags">
+              <span>Java</span>
+              <span>Android Studio</span>
+              <span>Firebase</span>
+              <span>RecyclerView</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="proj-btn github-btn">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+              <a href="#" class="proj-btn demo-btn">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Project 2: Weather App ── -->
+        <div class="project-card reveal" data-delay="100">
+          <div class="project-image" style="--accent:#00b4d8">
+            <div class="project-icon-wrap">
+              <i class="fas fa-cloud-sun"></i>
+            </div>
+            <div class="project-shine"></div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Weather App</h3>
+            <p class="project-desc">
+              A beautiful real-time weather application that fetches live data from OpenWeatherMap
+              API. Displays temperature, humidity, wind speed, and 5-day forecasts with clean UI.
+            </p>
+            <div class="project-tags">
+              <span>Java</span>
+              <span>REST API</span>
+              <span>Android Studio</span>
+              <span>Retrofit</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="proj-btn github-btn">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+              <a href="#" class="proj-btn demo-btn">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Project 3: Movie Ticket Booking ── -->
+        <div class="project-card reveal" data-delay="200">
+          <div class="project-image" style="--accent:#e76f51">
+            <div class="project-icon-wrap">
+              <i class="fas fa-film"></i>
+            </div>
+            <div class="project-shine"></div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Movie Ticket Booking UI</h3>
+            <p class="project-desc">
+              A sleek movie ticket booking interface with seat selection, show-time browsing,
+              and booking confirmation flows. Focuses on modern UX patterns for entertainment apps.
+            </p>
+            <div class="project-tags">
+              <span>Java</span>
+              <span>XML Layouts</span>
+              <span>Material Design</span>
+              <span>ViewPager2</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="proj-btn github-btn">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+              <a href="#" class="proj-btn demo-btn">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Project 4: LeetCode Journey ── -->
+        <div class="project-card reveal" data-delay="300">
+          <div class="project-image" style="--accent:#c77dff">
+            <div class="project-icon-wrap">
+              <i class="fas fa-code"></i>
+            </div>
+            <div class="project-shine"></div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">LeetCode Practice Journey</h3>
+            <p class="project-desc">
+              A curated GitHub repository documenting my DSA journey — 100+ problems solved
+              across arrays, linked lists, trees, graphs, and DP. Organized by topic with
+              clean solutions in C++ and Java.
+            </p>
+            <div class="project-tags">
+              <span>C++</span>
+              <span>Java</span>
+              <span>DSA</span>
+              <span>LeetCode</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="proj-btn github-btn">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+              <a href="#" class="proj-btn demo-btn">
+                <i class="fas fa-external-link-alt"></i> View Sheet
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ CODING PROFILES ══════ -->
+  <section class="profiles section" id="profiles">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// find_me_at</span>
+        <h2 class="section-title">Coding Profiles</h2>
+        <p class="section-sub">Where I grind, share, and connect</p>
+      </div>
+
+      <div class="profiles-grid">
+
+        <a href="#" target="_blank" class="profile-card reveal" data-delay="0" data-platform="github">
+          <div class="profile-glow"></div>
+          <div class="profile-icon">
+            <i class="fab fa-github"></i>
+          </div>
+          <div class="profile-info">
+            <h3>GitHub</h3>
+            <p>Projects &amp; Open Source</p>
+            <span class="profile-handle">@divya-dev</span>
+          </div>
+          <div class="profile-arrow"><i class="fas fa-arrow-up-right-from-square"></i></div>
+        </a>
+
+        <a href="#" target="_blank" class="profile-card reveal" data-delay="80" data-platform="leetcode">
+          <div class="profile-glow"></div>
+          <div class="profile-icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <div class="profile-info">
+            <h3>LeetCode</h3>
+            <p>DSA Problem Solving</p>
+            <span class="profile-handle">@divya_codes</span>
+          </div>
+          <div class="profile-arrow"><i class="fas fa-arrow-up-right-from-square"></i></div>
+        </a>
+
+        <a href="#" target="_blank" class="profile-card reveal" data-delay="160" data-platform="codeforces">
+          <div class="profile-glow"></div>
+          <div class="profile-icon">
+            <i class="fas fa-trophy"></i>
+          </div>
+          <div class="profile-info">
+            <h3>Codeforces</h3>
+            <p>Competitive Programming</p>
+            <span class="profile-handle">@divya_cf</span>
+          </div>
+          <div class="profile-arrow"><i class="fas fa-arrow-up-right-from-square"></i></div>
+        </a>
+
+        <a href="#" target="_blank" class="profile-card reveal" data-delay="240" data-platform="linkedin">
+          <div class="profile-glow"></div>
+          <div class="profile-icon">
+            <i class="fab fa-linkedin-in"></i>
+          </div>
+          <div class="profile-info">
+            <h3>LinkedIn</h3>
+            <p>Professional Network</p>
+            <span class="profile-handle">in/divya-engineer</span>
+          </div>
+          <div class="profile-arrow"><i class="fas fa-arrow-up-right-from-square"></i></div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ CONTACT ═════════════ -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// get_in_touch</span>
+        <h2 class="section-title">Contact Me</h2>
+        <p class="section-sub">Have an idea or opportunity? Let's talk.</p>
+      </div>
+
+      <div class="contact-grid">
+
+        <!-- Contact Info -->
+        <div class="contact-info reveal">
+          <h3>Let's Build Something <span class="gradient-text">Together</span></h3>
+          <p>
+            I'm always open to internship opportunities, collaborative projects, or just a good
+            tech conversation. Drop me a message and I'll get back to you soon!
+          </p>
+
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <span class="contact-label">Email</span>
+                <a href="mailto:divya@example.com">divya@example.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div>
+                <span class="contact-label">Location</span>
+                <span>India 🇮🇳</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-graduation-cap"></i></div>
+              <div>
+                <span class="contact-label">Status</span>
+                <span>3rd Year Engineering Student</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social media icons -->
+          <div class="social-icons">
+            <a href="#" target="_blank" class="social-icon" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="#" target="_blank" class="social-icon" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" target="_blank" class="social-icon" aria-label="LeetCode">
+              <i class="fas fa-code"></i>
+            </a>
+            <a href="#" target="_blank" class="social-icon" aria-label="Twitter">
+              <i class="fab fa-x-twitter"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-wrap reveal" data-delay="100">
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="e.g. Priya Sharma" required/>
+            </div>
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" name="email" placeholder="priya@example.com" required/>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Internship Opportunity / Collab"/>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5"
+                placeholder="Hey Divya, I'd love to discuss..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+            <div class="form-success" id="formSuccess">
+              <i class="fas fa-circle-check"></i> Message sent! I'll reply soon. 🚀
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ FOOTER ═══════════════ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <span class="logo-bracket">&lt;</span>Divya<span class="logo-bracket">/&gt;</span>
+      </div>
+      <p class="footer-copy">
+        Designed &amp; Developed by <span class="gradient-text">Divya</span> · 2024
+      </p>
+      <div class="footer-socials">
+        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="LeetCode"><i class="fas fa-code"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Built with <i class="fas fa-heart" style="color:#e76f51"></i> &amp; lots of ☕</p>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════ BACK TO TOP ══════════ -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- Main JS -->
+  <script src="script.js"></script>
+</body>
+</html>
